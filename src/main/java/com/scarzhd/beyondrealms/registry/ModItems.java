@@ -28,12 +28,12 @@ import net.minecraft.world.item.equipment.ArmorType;
 import net.minecraft.world.level.block.Block;
 
 public final class ModItems {
-    public static final TagKey<Block> INCORRECT_FOR_ETERNIIUM_TOOL = TagKey.create(
+    public static final TagKey<Block> INCORRECT_FOR_ETERNIUM_TOOL = TagKey.create(
             Registries.BLOCK, BeyondRealmsMod.id("incorrect_for_eternium_tool")
     );
 
     public static final ToolMaterial ETERNIUM_TOOL_MATERIAL = new ToolMaterial(
-            INCORRECT_FOR_ETERNIIUM_TOOL,
+            INCORRECT_FOR_ETERNIUM_TOOL,
             4096,
             12.0F,
             6.0F,
@@ -42,7 +42,7 @@ public final class ModItems {
     );
 
     public static final ToolMaterial GODFORGED_TOOL_MATERIAL = new ToolMaterial(
-            INCORRECT_FOR_ETERNIIUM_TOOL,
+            INCORRECT_FOR_ETERNIUM_TOOL,
             10000,
             24.0F,
             14.0F,
@@ -50,7 +50,7 @@ public final class ModItems {
             EterniumArmorMaterials.REPAIRS_GODFORGED_ARMOR
     );
 
-    public static final Item RAW_ETERNIIUM = register("raw_eternium", Item::new, new Item.Properties());
+    public static final Item RAW_ETERNIUM = register("raw_eternium", Item::new, new Item.Properties());
     public static final Item ETERNIUM_INGOT = register("eternium_ingot", Item::new, new Item.Properties().rarity(Rarity.RARE));
     public static final Item TITAN_CORE = register("titan_core", Item::new, new Item.Properties().stacksTo(16).rarity(Rarity.EPIC));
 
@@ -153,28 +153,28 @@ public final class ModItems {
     public static final Item VOID_TITAN_TROPHY = trophy("void_titan_trophy");
 
     public static final Item ETERNIUM_SWORD = register("eternium_sword", Item::new,
-            new Item.Properties().sword(ETERNIIUM_TOOL_MATERIAL, 5.0F, -2.35F).rarity(Rarity.RARE));
+            new Item.Properties().sword(ETERNIUM_TOOL_MATERIAL, 5.0F, -2.35F).rarity(Rarity.RARE));
     public static final Item ETERNIUM_PICKAXE = register("eternium_pickaxe", Item::new,
-            new Item.Properties().pickaxe(ETERNIIUM_TOOL_MATERIAL, 1.5F, -2.8F).rarity(Rarity.RARE));
+            new Item.Properties().pickaxe(ETERNIUM_TOOL_MATERIAL, 1.5F, -2.8F).rarity(Rarity.RARE));
     public static final Item ETERNIUM_AXE = register("eternium_axe", Item::new,
-            new Item.Properties().axe(ETERNIIUM_TOOL_MATERIAL, 7.0F, -3.0F).rarity(Rarity.RARE));
+            new Item.Properties().axe(ETERNIUM_TOOL_MATERIAL, 7.0F, -3.0F).rarity(Rarity.RARE));
     public static final Item ETERNIUM_SHOVEL = register("eternium_shovel", Item::new,
-            new Item.Properties().shovel(ETERNIIUM_TOOL_MATERIAL, 2.0F, -3.0F).rarity(Rarity.RARE));
+            new Item.Properties().shovel(ETERNIUM_TOOL_MATERIAL, 2.0F, -3.0F).rarity(Rarity.RARE));
     public static final Item ETERNIUM_HOE = register("eternium_hoe", Item::new,
-            new Item.Properties().hoe(ETERNIIUM_TOOL_MATERIAL, -4.0F, 0.0F).rarity(Rarity.RARE));
+            new Item.Properties().hoe(ETERNIUM_TOOL_MATERIAL, -4.0F, 0.0F).rarity(Rarity.RARE));
 
     public static final Item ETERNIUM_HELMET = register("eternium_helmet", Item::new,
-            new Item.Properties().humanoidArmor(EterniumArmorMaterials.ETERNIIUM, ArmorType.HELMET)
-                    .durability(ArmorType.HELMET.getDurability(EterniumArmorMaterials.ETERNIIUM_BASE_DURABILITY)).rarity(Rarity.RARE));
+            new Item.Properties().humanoidArmor(EterniumArmorMaterials.ETERNIUM, ArmorType.HELMET)
+                    .durability(ArmorType.HELMET.getDurability(EterniumArmorMaterials.ETERNIUM_BASE_DURABILITY)).rarity(Rarity.RARE));
     public static final Item ETERNIUM_CHESTPLATE = register("eternium_chestplate", Item::new,
-            new Item.Properties().humanoidArmor(EterniumArmorMaterials.ETERNIIUM, ArmorType.CHESTPLATE)
-                    .durability(ArmorType.CHESTPLATE.getDurability(EterniumArmorMaterials.ETERNIIUM_BASE_DURABILITY)).rarity(Rarity.RARE));
+            new Item.Properties().humanoidArmor(EterniumArmorMaterials.ETERNIUM, ArmorType.CHESTPLATE)
+                    .durability(ArmorType.CHESTPLATE.getDurability(EterniumArmorMaterials.ETERNIUM_BASE_DURABILITY)).rarity(Rarity.RARE));
     public static final Item ETERNIUM_LEGGINGS = register("eternium_leggings", Item::new,
-            new Item.Properties().humanoidArmor(EterniumArmorMaterials.ETERNIIUM, ArmorType.LEGGINGS)
-                    .durability(ArmorType.LEGGINGS.getDurability(EterniumArmorMaterials.ETERNIIUM_BASE_DURABILITY)).rarity(Rarity.RARE));
+            new Item.Properties().humanoidArmor(EterniumArmorMaterials.ETERNIUM, ArmorType.LEGGINGS)
+                    .durability(ArmorType.LEGGINGS.getDurability(EterniumArmorMaterials.ETERNIUM_BASE_DURABILITY)).rarity(Rarity.RARE));
     public static final Item ETERNIUM_BOOTS = register("eternium_boots", Item::new,
-            new Item.Properties().humanoidArmor(EterniumArmorMaterials.ETERNIIUM, ArmorType.BOOTS)
-                    .durability(ArmorType.BOOTS.getDurability(EterniumArmorMaterials.ETERNIIUM_BASE_DURABILITY)).rarity(Rarity.RARE));
+            new Item.Properties().humanoidArmor(EterniumArmorMaterials.ETERNIUM, ArmorType.BOOTS)
+                    .durability(ArmorType.BOOTS.getDurability(EterniumArmorMaterials.ETERNIUM_BASE_DURABILITY)).rarity(Rarity.RARE));
     public static final Item ETERNIUM_SHIELD = register("eternium_shield", ShieldItem::new,
             new Item.Properties().durability(2500).rarity(Rarity.RARE));
 
@@ -208,22 +208,22 @@ public final class ModItems {
             .icon(() -> new ItemStack(TITAN_CORE))
             .title(Component.translatable("creativeTab.beyondrealms"))
             .displayItems((parameters, output) -> {
-                output.accept(ModBlocks.ETERNIIUM_ORE);
+                output.accept(ModBlocks.ETERNIUM_ORE);
                 output.accept(ModBlocks.DEEPSLATE_ETERNIIUM_ORE);
-                output.accept(ModBlocks.ETERNIIUM_BLOCK);
-                output.accept(RAW_ETERNIIUM);
-                output.accept(ETERNIIUM_INGOT);
+                output.accept(ModBlocks.ETERNIUM_BLOCK);
+                output.accept(RAW_ETERNIUM);
+                output.accept(ETERNIUM_INGOT);
                 output.accept(TITAN_CORE);
-                output.accept(ETERNIIUM_SWORD);
-                output.accept(ETERNIIUM_PICKAXE);
-                output.accept(ETERNIIUM_AXE);
-                output.accept(ETERNIIUM_SHOVEL);
-                output.accept(ETERNIIUM_HOE);
-                output.accept(ETERNIIUM_HELMET);
-                output.accept(ETERNIIUM_CHESTPLATE);
-                output.accept(ETERNIIUM_LEGGINGS);
-                output.accept(ETERNIIUM_BOOTS);
-                output.accept(ETERNIIUM_SHIELD);
+                output.accept(ETERNIUM_SWORD);
+                output.accept(ETERNIUM_PICKAXE);
+                output.accept(ETERNIUM_AXE);
+                output.accept(ETERNIUM_SHOVEL);
+                output.accept(ETERNIUM_HOE);
+                output.accept(ETERNIUM_HELMET);
+                output.accept(ETERNIUM_CHESTPLATE);
+                output.accept(ETERNIUM_LEGGINGS);
+                output.accept(ETERNIUM_BOOTS);
+                output.accept(ETERNIUM_SHIELD);
                 output.accept(SPEED_RELIC);
                 output.accept(STRENGTH_RELIC);
                 output.accept(SHADOW_RELIC);
@@ -270,13 +270,13 @@ public final class ModItems {
         Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, BEYOND_REALMS_TAB_KEY, BEYOND_REALMS_TAB);
 
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.BUILDING_BLOCKS).register(output -> {
-            output.accept(ModBlocks.ETERNIIUM_ORE);
+            output.accept(ModBlocks.ETERNIUM_ORE);
             output.accept(ModBlocks.DEEPSLATE_ETERNIIUM_ORE);
-            output.accept(ModBlocks.ETERNIIUM_BLOCK);
+            output.accept(ModBlocks.ETERNIUM_BLOCK);
         });
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.INGREDIENTS).register(output -> {
-            output.accept(RAW_ETERNIIUM);
-            output.accept(ETERNIIUM_INGOT);
+            output.accept(RAW_ETERNIUM);
+            output.accept(ETERNIUM_INGOT);
             output.accept(TITAN_CORE);
             output.accept(SPEED_RELIC);
             output.accept(STRENGTH_RELIC);
@@ -298,19 +298,19 @@ public final class ModItems {
             output.accept(GOD_GEAR_CATALYST);
         });
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.TOOLS_AND_UTILITIES).register(output -> {
-            output.accept(ETERNIIUM_PICKAXE);
-            output.accept(ETERNIIUM_AXE);
-            output.accept(ETERNIIUM_SHOVEL);
-            output.accept(ETERNIIUM_HOE);
+            output.accept(ETERNIUM_PICKAXE);
+            output.accept(ETERNIUM_AXE);
+            output.accept(ETERNIUM_SHOVEL);
+            output.accept(ETERNIUM_HOE);
             output.accept(GODFORGED_PICKAXE);
         });
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.COMBAT).register(output -> {
-            output.accept(ETERNIIUM_SWORD);
-            output.accept(ETERNIIUM_HELMET);
-            output.accept(ETERNIIUM_CHESTPLATE);
-            output.accept(ETERNIIUM_LEGGINGS);
-            output.accept(ETERNIIUM_BOOTS);
-            output.accept(ETERNIIUM_SHIELD);
+            output.accept(ETERNIUM_SWORD);
+            output.accept(ETERNIUM_HELMET);
+            output.accept(ETERNIUM_CHESTPLATE);
+            output.accept(ETERNIUM_LEGGINGS);
+            output.accept(ETERNIUM_BOOTS);
+            output.accept(ETERNIUM_SHIELD);
             output.accept(GODFORGED_SWORD);
             output.accept(GODFORGED_HELMET);
             output.accept(GODFORGED_CHESTPLATE);
