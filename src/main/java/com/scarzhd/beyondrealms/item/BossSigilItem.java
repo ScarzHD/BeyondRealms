@@ -1,6 +1,7 @@
 package com.scarzhd.beyondrealms.item;
 
 import net.minecraft.network.chat.Component;
+import net.minecraft.server.permissions.PermissionSet;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -36,8 +37,14 @@ public class BossSigilItem extends Item {
     @Override
     public InteractionResult use(Level level, Player player, InteractionHand hand) {
         if (!level.isClientSide() && player instanceof ServerPlayer serverPlayer) {
-            var source = serverPlayer.createCommandSourceStack().withPermission(2).withSuppressedOutput();
-            var commands = serverPlayer.getServer().getCommands();
+            var source = serverPlayer.createCommandSourceStack()
+                    .withPermission(PermissionSet.ALL_PERMISSIONS)
+                    .withSuppressedOutput();
+            var server = serverPlayer.level().getServer();
+            if (server == null) {
+                return InteractionResult.FAIL;
+            }
+            var commands = server.getCommands();
             String selector = "@e[tag=" + bossTag + ",sort=nearest,limit=1,distance=..20]";
             String nameJson = "{\"text\":\"" + bossName + "\",\"color\":\"" + color + "\",\"bold\":true}";
 
@@ -60,7 +67,7 @@ public class BossSigilItem extends Item {
                 }
             }
 
-            serverPlayer.displayClientMessage(Component.literal(bossName + " has entered the realm!"), false);
+            serverPlayer.sendSystemMessage(Component.literal(bossName + " has entered the realm!"));
         }
         return InteractionResult.SUCCESS;
     }
