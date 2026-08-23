@@ -3,6 +3,7 @@ package com.scarzhd.beyondrealms;
 import com.scarzhd.beyondrealms.boss.BossDrops;
 import com.scarzhd.beyondrealms.registry.ModBlocks;
 import com.scarzhd.beyondrealms.registry.ModEntities;
+import com.scarzhd.beyondrealms.registry.ModGenetics;
 import com.scarzhd.beyondrealms.registry.ModItems;
 import com.scarzhd.beyondrealms.registry.ModRealmContent;
 import com.scarzhd.beyondrealms.world.ModWorldgen;
@@ -21,9 +22,10 @@ public class BeyondRealmsMod implements ModInitializer {
         ModItems.initialize();
         ModRealmContent.initialize();
         ModEntities.initialize();
+        ModGenetics.initialize();
         ModWorldgen.initialize();
         BossDrops.initialize();
-        LOGGER.info("Beyond Realms 1.2.0 loaded for Minecraft 26.2");
+        LOGGER.info("Beyond Realms 1.3.0 loaded for Minecraft 26.2");
     }
 
     public static Identifier id(String path) {

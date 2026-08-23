@@ -3,7 +3,7 @@
   "id": "beyondrealms",
   "version": "${version}",
   "name": "Beyond Realms",
-  "description": "A realm-hopping Fabric adventure mod with custom biomes, ores, creatures, bosses, relics and end-game progression.",
+  "description": "A realm-hopping Fabric adventure mod with custom dimensions, genetics, dinosaurs, hybrids, ores, bosses and end-game progression.",
   "authors": ["ScarzHD"],
   "contact": {"sources": "https://github.com/ScarzHD/BeyondRealms"},
   "license": "MIT",
