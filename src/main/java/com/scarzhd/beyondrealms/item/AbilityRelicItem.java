@@ -29,7 +29,7 @@ public class AbilityRelicItem extends Item {
             for (EffectSpec effect : effects) {
                 player.addEffect(new MobEffectInstance(effect.effect(), effect.durationTicks(), effect.amplifier()));
             }
-            player.displayClientMessage(Component.translatable(messageKey), true);
+            player.sendSystemMessage(Component.translatable(messageKey));
         }
         return InteractionResult.SUCCESS;
     }
