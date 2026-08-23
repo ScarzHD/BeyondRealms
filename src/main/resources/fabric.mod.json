@@ -3,19 +3,14 @@
   "id": "beyondrealms",
   "version": "${version}",
   "name": "Beyond Realms",
-  "description": "A progression-focused Fabric mod with Eternium, ability relics, four dimensions, bosses, trophy heads and Godforged gear.",
-  "authors": [
-    "ScarzHD"
-  ],
-  "contact": {
-    "sources": "https://github.com/ScarzHD/BeyondRealms"
-  },
+  "description": "A realm-hopping Fabric adventure mod with custom biomes, ores, creatures, bosses, relics and end-game progression.",
+  "authors": ["ScarzHD"],
+  "contact": {"sources": "https://github.com/ScarzHD/BeyondRealms"},
   "license": "MIT",
   "environment": "*",
   "entrypoints": {
-    "main": [
-      "com.scarzhd.beyondrealms.BeyondRealmsMod"
-    ]
+    "main": ["com.scarzhd.beyondrealms.BeyondRealmsMod"],
+    "client": ["com.scarzhd.beyondrealms.client.BeyondRealmsClient"]
   },
   "depends": {
     "fabricloader": ">=0.19.3",
