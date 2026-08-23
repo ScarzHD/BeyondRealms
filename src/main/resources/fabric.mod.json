@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "beyondrealms",
+  "version": "${version}",
+  "name": "Beyond Realms",
+  "description": "A progression-focused Fabric mod with powerful relics, ores, bosses, dimensions, trophies, armor, tools and weapons.",
+  "authors": [
+    "ScarzHD"
+  ],
+  "contact": {
+    "sources": "https://github.com/ScarzHD/BeyondRealms"
+  },
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.scarzhd.beyondrealms.BeyondRealmsMod"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.19.3",
+    "minecraft": "~26.2",
+    "java": ">=25",
+    "fabric-api": "*"
+  }
+}
