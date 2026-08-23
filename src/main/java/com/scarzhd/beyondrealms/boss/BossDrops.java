@@ -14,21 +14,22 @@ public final class BossDrops {
 
     public static void initialize() {
         ServerLivingEntityEvents.AFTER_DEATH.register((entity, source) -> {
-            if (!(entity.level() instanceof ServerLevel serverLevel)) {
+            if (!(entity.level() instanceof ServerLevel serverLevel) || entity.getCustomName() == null) {
                 return;
             }
 
-            if (entity.getTags().contains("br_titan_rex")) {
+            String name = entity.getCustomName().getString();
+            if (name.equals("Titan Rex")) {
                 drop(serverLevel, entity, ModItems.TITAN_REX_TROPHY, 1);
                 drop(serverLevel, entity, ModItems.TITAN_CORE, 2);
                 drop(serverLevel, entity, ModItems.ETERNIUM_INGOT, 8);
-            } else if (entity.getTags().contains("br_wraith_lord")) {
+            } else if (name.equals("Wraith Lord")) {
                 drop(serverLevel, entity, ModItems.WRAITH_LORD_TROPHY, 1);
                 drop(serverLevel, entity, ModItems.TITAN_CORE, 2);
-            } else if (entity.getTags().contains("br_brood_mother")) {
+            } else if (name.equals("Brood Mother")) {
                 drop(serverLevel, entity, ModItems.BROOD_MOTHER_TROPHY, 1);
                 drop(serverLevel, entity, ModItems.TITAN_CORE, 2);
-            } else if (entity.getTags().contains("br_void_titan")) {
+            } else if (name.equals("Void Titan")) {
                 drop(serverLevel, entity, ModItems.VOID_TITAN_TROPHY, 1);
                 drop(serverLevel, entity, ModItems.TITAN_CORE, 4);
             }
