@@ -1,17 +1,20 @@
 # Beyond Realms
 
-Beyond Realms is a Fabric 26.2 progression and exploration mod.
+Beyond Realms is a Fabric 26.2 adventure/progression mod built around four dangerous dimensions, realm-exclusive resources, custom creatures, bosses, relics and Godforged end-game equipment.
 
-## 1.0 feature set
+## Realms
 
-- Eternium ore, block, ingots, armor, tools, weapons and shields
-- Godforged end-game gear and a God Gear Catalyst that grants stacked enchantments
-- Ability relics for speed, strength, shadow and titan defense
-- Four rift dimensions: Dinosaur Wilds, Paranormal Realm, Spider Caves and Titan Expanse
-- Rift keys and a Homeward Key for travel
-- Four summonable bosses: Titan Rex, Wraith Lord, Brood Mother and Void Titan
-- Boss trophy heads and guaranteed Titan Core drops
-- Natural Eternium ore generation in the Overworld
-- Dedicated Beyond Realms creative tab plus placement in vanilla creative tabs
+- **Dinosaur Wilds / Primeval Jungle** — dense prehistoric wilderness, Primeval Amber and Primeval Raptors.
+- **Paranormal Realm / Haunted Wastes** — spectral wastes filled with Wraithstone and Grave Wraiths.
+- **Spider Caves / Brood Hollows** — suffocating underground caverns rich in Brood Crystal and swarming with Broodlings.
+- **Titan Expanse / Void Frontier** — hostile void islands containing Voidium and Void Stalkers.
 
-Minecraft 26.2 / Fabric Loader 0.19.3 / Fabric API 0.158.0+26.2 / Java 25.
+## Cross-realm progression
+
+Each realm provides an ore/material and a creature drop. Survivors who collect all eight realm components plus a Titan Core can craft the **Nexus Core**, a powerful late-game relic that represents mastery of all four realms.
+
+The project also includes Eternium progression, rift keys, boss sigils, trophy heads, ability relics and Godforged equipment.
+
+## Custom world
+
+A dedicated handcrafted Beyond Realms adventure map is planned for a later phase. The mod itself remains playable in normal generated worlds and is being built so a future official map can layer story, structures, dungeons and streamer-friendly progression on top.
