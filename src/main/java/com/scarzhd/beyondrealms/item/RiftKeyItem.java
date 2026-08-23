@@ -1,6 +1,7 @@
 package com.scarzhd.beyondrealms.item;
 
 import net.minecraft.network.chat.Component;
+import net.minecraft.server.permissions.PermissionSet;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -23,8 +24,14 @@ public class RiftKeyItem extends Item {
     @Override
     public InteractionResult use(Level level, Player player, InteractionHand hand) {
         if (!level.isClientSide() && player instanceof ServerPlayer serverPlayer) {
-            var source = serverPlayer.createCommandSourceStack().withPermission(2).withSuppressedOutput();
-            var commands = serverPlayer.getServer().getCommands();
+            var source = serverPlayer.createCommandSourceStack()
+                    .withPermission(PermissionSet.ALL_PERMISSIONS)
+                    .withSuppressedOutput();
+            var server = serverPlayer.level().getServer();
+            if (server == null) {
+                return InteractionResult.FAIL;
+            }
+            var commands = server.getCommands();
             int floorY = arrivalY - 1;
 
             commands.performPrefixedCommand(source, "effect give @s minecraft:resistance 12 4 true");
@@ -32,7 +39,7 @@ public class RiftKeyItem extends Item {
             commands.performPrefixedCommand(source, "execute in " + dimensionId + " run fill -2 " + floorY + " -2 2 " + floorY + " 2 minecraft:obsidian");
             commands.performPrefixedCommand(source, "execute in " + dimensionId + " run fill -2 " + arrivalY + " -2 2 " + (arrivalY + 3) + " 2 minecraft:air");
             commands.performPrefixedCommand(source, "execute in " + dimensionId + " run tp @s 0 " + arrivalY + " 0");
-            serverPlayer.displayClientMessage(Component.translatable(messageKey), true);
+            serverPlayer.sendSystemMessage(Component.translatable(messageKey));
         }
         return InteractionResult.SUCCESS;
     }
