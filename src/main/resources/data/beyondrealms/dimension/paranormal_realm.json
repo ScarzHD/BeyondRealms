@@ -5,7 +5,7 @@
     "settings": "minecraft:nether",
     "biome_source": {
       "type": "minecraft:fixed",
-      "biome": "minecraft:soul_sand_valley"
+      "biome": "beyondrealms:haunted_wastes"
     }
   }
 }

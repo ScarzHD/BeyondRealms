@@ -1,0 +1,38 @@
+{
+  "attributes": {
+    "minecraft:audio/ambient_sounds": {
+      "loop": "minecraft:ambient.basalt_deltas.loop",
+      "mood": {"block_search_extent": 8, "offset": 1.5, "sound": "minecraft:ambient.cave", "tick_delay": 3600}
+    },
+    "minecraft:visual/ambient_particles": [
+      {"particle": {"type": "minecraft:ash"}, "probability": 0.003}
+    ],
+    "minecraft:visual/fog_color": "#160d19",
+    "minecraft:visual/sky_color": "#09060c"
+  },
+  "carvers": ["minecraft:cave", "minecraft:cave_extra_underground", "minecraft:canyon"],
+  "downfall": 0.2,
+  "effects": {"water_color": "#332044"},
+  "features": [
+    [], [], ["minecraft:amethyst_geode"], ["minecraft:monster_room", "minecraft:monster_room_deep"], [], [],
+    ["minecraft:ore_dirt", "minecraft:ore_gravel", "minecraft:ore_tuff", "minecraft:ore_coal_lower", "minecraft:ore_iron_middle", "minecraft:ore_redstone_lower", "minecraft:ore_diamond_buried", "minecraft:ore_lapis_buried"],
+    ["minecraft:sculk_vein", "minecraft:sculk_patch_deep_dark"],
+    [],
+    ["minecraft:glow_lichen", "minecraft:brown_mushroom_normal", "minecraft:red_mushroom_normal"],
+    []
+  ],
+  "has_precipitation": false,
+  "spawn_costs": {},
+  "spawners": {
+    "ambient": [{"type":"minecraft:bat","maxCount":8,"minCount":4,"weight":10}],
+    "axolotls": [], "creature": [], "misc": [],
+    "monster": [
+      {"type":"minecraft:cave_spider","maxCount":5,"minCount":2,"weight":100},
+      {"type":"minecraft:spider","maxCount":4,"minCount":2,"weight":80},
+      {"type":"minecraft:silverfish","maxCount":4,"minCount":2,"weight":30},
+      {"type":"minecraft:enderman","maxCount":2,"minCount":1,"weight":5}
+    ],
+    "underground_water_creature": [], "water_ambient": [], "water_creature": []
+  },
+  "temperature": 0.45
+}
