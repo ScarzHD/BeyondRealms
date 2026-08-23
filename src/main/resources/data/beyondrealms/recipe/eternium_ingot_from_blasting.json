@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:blasting",
+  "cookingtime": 100,
+  "experience": 1.0,
+  "ingredient": "beyondrealms:raw_eternium",
+  "result": {"id": "beyondrealms:eternium_ingot"}
+}

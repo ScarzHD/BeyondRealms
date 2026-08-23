@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": ["SSS","SKS","STS"],
+  "key": {"S": "minecraft:soul_sand", "K": "beyondrealms:paranormal_rift_key", "T": "beyondrealms:titan_core"},
+  "result": {"id": "beyondrealms:wraith_lord_sigil"}
+}

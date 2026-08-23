@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": ["E E","E E"],
+  "key": {"E": "beyondrealms:eternium_ingot"},
+  "result": {"id": "beyondrealms:eternium_boots"}
+}

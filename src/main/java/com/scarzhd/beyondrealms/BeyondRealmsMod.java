@@ -1,6 +1,9 @@
 package com.scarzhd.beyondrealms;
 
+import com.scarzhd.beyondrealms.boss.BossDrops;
+import com.scarzhd.beyondrealms.registry.ModBlocks;
 import com.scarzhd.beyondrealms.registry.ModItems;
+import com.scarzhd.beyondrealms.world.ModWorldgen;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.resources.Identifier;
 import org.slf4j.Logger;
@@ -12,8 +15,11 @@ public class BeyondRealmsMod implements ModInitializer {
 
     @Override
     public void onInitialize() {
+        ModBlocks.initialize();
         ModItems.initialize();
-        LOGGER.info("Beyond Realms loaded for Minecraft 26.2");
+        ModWorldgen.initialize();
+        BossDrops.initialize();
+        LOGGER.info("Beyond Realms 1.0.0 loaded for Minecraft 26.2");
     }
 
     public static Identifier id(String path) {

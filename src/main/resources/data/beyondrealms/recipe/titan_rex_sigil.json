@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": ["BEB","EKE","BEB"],
+  "key": {"B": "minecraft:bone", "E": "beyondrealms:eternium_ingot", "K": "beyondrealms:dinosaur_rift_key"},
+  "result": {"id": "beyondrealms:titan_rex_sigil"}
+}
