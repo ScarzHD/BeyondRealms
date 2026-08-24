@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": ["AGA", "RER", "ICI"],
+  "key": {"A": "minecraft:amethyst_shard", "G": "minecraft:glass", "R": "minecraft:redstone", "E": "beyondrealms:eternium_ingot", "I": "minecraft:iron_ingot", "C": "minecraft:copper_ingot"},
+  "result": {"id": "beyondrealms:genome_sequencer"}
+}
