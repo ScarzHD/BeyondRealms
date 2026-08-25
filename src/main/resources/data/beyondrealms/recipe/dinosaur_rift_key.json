@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [" B ","EPE"," B "],
+  "key": {"B": "minecraft:bone", "E": "beyondrealms:eternium_ingot", "P": "minecraft:ender_pearl"},
+  "result": {"id": "beyondrealms:dinosaur_rift_key"}
+}

@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": ["ADA", "RER", "ICI"],
+  "key": {"A": "minecraft:amethyst_shard", "D": "minecraft:diamond", "R": "minecraft:redstone", "E": "beyondrealms:eternium_ingot", "I": "minecraft:iron_ingot", "C": "minecraft:copper_ingot"},
+  "result": {"id": "beyondrealms:gene_splicer"}
+}

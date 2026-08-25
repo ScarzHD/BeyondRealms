@@ -1,0 +1,6 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": ["beyondrealms:eternium_block"],
+  "result": {"id": "beyondrealms:eternium_ingot", "count": 9}
+}

@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [" S ","CTC"," S "],
+  "key": {"S": "minecraft:soul_sand", "C": "beyondrealms:eternium_ingot", "T": "beyondrealms:titan_core"},
+  "result": {"id": "beyondrealms:paranormal_rift_key"}
+}

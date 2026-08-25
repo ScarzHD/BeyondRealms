@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": ["WWW","WKW","WTW"],
+  "key": {"W": "minecraft:cobweb", "K": "beyondrealms:spider_rift_key", "T": "beyondrealms:titan_core"},
+  "result": {"id": "beyondrealms:brood_mother_sigil"}
+}

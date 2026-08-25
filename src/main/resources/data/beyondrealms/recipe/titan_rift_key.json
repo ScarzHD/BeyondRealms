@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [" E ","CTC"," E "],
+  "key": {"E": "minecraft:ender_eye", "C": "beyondrealms:eternium_ingot", "T": "beyondrealms:titan_core"},
+  "result": {"id": "beyondrealms:titan_rift_key"}
+}

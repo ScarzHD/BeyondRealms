@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": ["GGG", "CEC", "IRI"],
+  "key": {"G": "minecraft:glass", "C": "minecraft:copper_ingot", "E": "minecraft:egg", "I": "minecraft:iron_ingot", "R": "minecraft:redstone"},
+  "result": {"id": "beyondrealms:egg_incubator"}
+}

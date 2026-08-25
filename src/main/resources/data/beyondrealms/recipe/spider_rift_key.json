@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [" W ","EPE"," W "],
+  "key": {"W": "minecraft:spider_eye", "E": "beyondrealms:eternium_ingot", "P": "minecraft:ender_pearl"},
+  "result": {"id": "beyondrealms:spider_rift_key"}
+}
