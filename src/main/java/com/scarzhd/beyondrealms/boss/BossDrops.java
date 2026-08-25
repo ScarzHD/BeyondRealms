@@ -1,6 +1,8 @@
 package com.scarzhd.beyondrealms.boss;
 
+import com.scarzhd.beyondrealms.registry.ModEntities;
 import com.scarzhd.beyondrealms.registry.ModItems;
+import com.scarzhd.beyondrealms.registry.ModRealmContent;
 import net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.LivingEntity;
@@ -14,24 +16,26 @@ public final class BossDrops {
 
     public static void initialize() {
         ServerLivingEntityEvents.AFTER_DEATH.register((entity, source) -> {
-            if (!(entity.level() instanceof ServerLevel serverLevel) || entity.getCustomName() == null) {
+            if (!(entity.level() instanceof ServerLevel serverLevel)) {
                 return;
             }
 
-            String name = entity.getCustomName().getString();
-            if (name.equals("Titan Rex")) {
+            if (entity.getType() == ModEntities.TITAN_REX) {
                 drop(serverLevel, entity, ModItems.TITAN_REX_TROPHY, 1);
-                drop(serverLevel, entity, ModItems.TITAN_CORE, 2);
-                drop(serverLevel, entity, ModItems.ETERNIUM_INGOT, 8);
-            } else if (name.equals("Wraith Lord")) {
+                drop(serverLevel, entity, ModItems.TITAN_CORE, 3);
+                drop(serverLevel, entity, ModItems.ETERNIUM_INGOT, 12);
+            } else if (entity.getType() == ModEntities.WRAITH_LORD) {
                 drop(serverLevel, entity, ModItems.WRAITH_LORD_TROPHY, 1);
-                drop(serverLevel, entity, ModItems.TITAN_CORE, 2);
-            } else if (name.equals("Brood Mother")) {
+                drop(serverLevel, entity, ModItems.TITAN_CORE, 3);
+                drop(serverLevel, entity, ModRealmContent.WRAITH_SHARD, 8);
+            } else if (entity.getType() == ModEntities.BROOD_MOTHER) {
                 drop(serverLevel, entity, ModItems.BROOD_MOTHER_TROPHY, 1);
-                drop(serverLevel, entity, ModItems.TITAN_CORE, 2);
-            } else if (name.equals("Void Titan")) {
+                drop(serverLevel, entity, ModItems.TITAN_CORE, 3);
+                drop(serverLevel, entity, ModRealmContent.BROOD_CRYSTAL, 8);
+            } else if (entity.getType() == ModEntities.VOID_TITAN) {
                 drop(serverLevel, entity, ModItems.VOID_TITAN_TROPHY, 1);
-                drop(serverLevel, entity, ModItems.TITAN_CORE, 4);
+                drop(serverLevel, entity, ModItems.TITAN_CORE, 5);
+                drop(serverLevel, entity, ModRealmContent.VOIDIUM_INGOT, 6);
             }
         });
     }
