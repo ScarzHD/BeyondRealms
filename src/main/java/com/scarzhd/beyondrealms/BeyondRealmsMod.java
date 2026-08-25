@@ -25,7 +25,7 @@ public class BeyondRealmsMod implements ModInitializer {
         ModGenetics.initialize();
         ModWorldgen.initialize();
         BossDrops.initialize();
-        LOGGER.info("Beyond Realms 1.3.0 loaded for Minecraft 26.2");
+        LOGGER.info("Beyond Realms 1.4.0 loaded for Minecraft 26.2");
     }
 
     public static Identifier id(String path) {

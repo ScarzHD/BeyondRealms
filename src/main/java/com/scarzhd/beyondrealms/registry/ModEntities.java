@@ -1,6 +1,10 @@
 package com.scarzhd.beyondrealms.registry;
 
 import com.scarzhd.beyondrealms.BeyondRealmsMod;
+import com.scarzhd.beyondrealms.boss.BroodMotherBossEntity;
+import com.scarzhd.beyondrealms.boss.TitanRexBossEntity;
+import com.scarzhd.beyondrealms.boss.VoidTitanBossEntity;
+import com.scarzhd.beyondrealms.boss.WraithLordBossEntity;
 import com.scarzhd.beyondrealms.entity.HerbivoreDinosaurEntity;
 import com.scarzhd.beyondrealms.entity.HybridDinosaurEntity;
 import com.scarzhd.beyondrealms.entity.RealmMobEntity;
@@ -32,6 +36,11 @@ public final class ModEntities {
     public static final EntityType<HybridDinosaurEntity> VOID_REX = hybrid("void_rex", 3.00F, 3.50F);
     public static final EntityType<HybridDinosaurEntity> APEX_CHIMERA = hybrid("apex_chimera", 3.20F, 3.80F);
 
+    public static final EntityType<TitanRexBossEntity> TITAN_REX = titanRexBoss("titan_rex", 3.80F, 4.80F);
+    public static final EntityType<WraithLordBossEntity> WRAITH_LORD = wraithLordBoss("wraith_lord", 1.60F, 3.40F);
+    public static final EntityType<BroodMotherBossEntity> BROOD_MOTHER = broodMotherBoss("brood_mother", 4.60F, 2.30F);
+    public static final EntityType<VoidTitanBossEntity> VOID_TITAN = voidTitanBoss("void_titan", 3.00F, 5.20F);
+
     private ModEntities() {}
 
     private static EntityType<RealmMobEntity> hostile(String name, float width, float height) {
@@ -49,6 +58,30 @@ public final class ModEntities {
     private static EntityType<HybridDinosaurEntity> hybrid(String name, float width, float height) {
         ResourceKey<EntityType<?>> key = ResourceKey.create(Registries.ENTITY_TYPE, BeyondRealmsMod.id(name));
         EntityType<HybridDinosaurEntity> type = EntityType.Builder.of(HybridDinosaurEntity::new, MobCategory.MONSTER).sized(width, height).build(key);
+        return Registry.register(BuiltInRegistries.ENTITY_TYPE, key, type);
+    }
+
+    private static EntityType<TitanRexBossEntity> titanRexBoss(String name, float width, float height) {
+        ResourceKey<EntityType<?>> key = ResourceKey.create(Registries.ENTITY_TYPE, BeyondRealmsMod.id(name));
+        EntityType<TitanRexBossEntity> type = EntityType.Builder.of(TitanRexBossEntity::new, MobCategory.MONSTER).sized(width, height).build(key);
+        return Registry.register(BuiltInRegistries.ENTITY_TYPE, key, type);
+    }
+
+    private static EntityType<WraithLordBossEntity> wraithLordBoss(String name, float width, float height) {
+        ResourceKey<EntityType<?>> key = ResourceKey.create(Registries.ENTITY_TYPE, BeyondRealmsMod.id(name));
+        EntityType<WraithLordBossEntity> type = EntityType.Builder.of(WraithLordBossEntity::new, MobCategory.MONSTER).sized(width, height).build(key);
+        return Registry.register(BuiltInRegistries.ENTITY_TYPE, key, type);
+    }
+
+    private static EntityType<BroodMotherBossEntity> broodMotherBoss(String name, float width, float height) {
+        ResourceKey<EntityType<?>> key = ResourceKey.create(Registries.ENTITY_TYPE, BeyondRealmsMod.id(name));
+        EntityType<BroodMotherBossEntity> type = EntityType.Builder.of(BroodMotherBossEntity::new, MobCategory.MONSTER).sized(width, height).build(key);
+        return Registry.register(BuiltInRegistries.ENTITY_TYPE, key, type);
+    }
+
+    private static EntityType<VoidTitanBossEntity> voidTitanBoss(String name, float width, float height) {
+        ResourceKey<EntityType<?>> key = ResourceKey.create(Registries.ENTITY_TYPE, BeyondRealmsMod.id(name));
+        EntityType<VoidTitanBossEntity> type = EntityType.Builder.of(VoidTitanBossEntity::new, MobCategory.MONSTER).sized(width, height).build(key);
         return Registry.register(BuiltInRegistries.ENTITY_TYPE, key, type);
     }
 
@@ -71,5 +104,10 @@ public final class ModEntities {
         FabricDefaultAttributeRegistry.register(WEBFANG, RealmMobEntity.attributes(80.0, 0.40, 12.0, 38.0, 0.30));
         FabricDefaultAttributeRegistry.register(VOID_REX, RealmMobEntity.attributes(190.0, 0.31, 26.0, 50.0, 0.75));
         FabricDefaultAttributeRegistry.register(APEX_CHIMERA, RealmMobEntity.attributes(260.0, 0.34, 32.0, 56.0, 0.85));
+
+        FabricDefaultAttributeRegistry.register(TITAN_REX, RealmMobEntity.attributes(520.0, 0.31, 32.0, 64.0, 0.92));
+        FabricDefaultAttributeRegistry.register(WRAITH_LORD, RealmMobEntity.attributes(440.0, 0.34, 24.0, 64.0, 0.70));
+        FabricDefaultAttributeRegistry.register(BROOD_MOTHER, RealmMobEntity.attributes(380.0, 0.33, 20.0, 56.0, 0.82));
+        FabricDefaultAttributeRegistry.register(VOID_TITAN, RealmMobEntity.attributes(720.0, 0.27, 36.0, 72.0, 0.96));
     }
 }

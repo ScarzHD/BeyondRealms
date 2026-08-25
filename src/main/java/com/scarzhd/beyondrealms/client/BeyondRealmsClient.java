@@ -16,6 +16,11 @@ public class BeyondRealmsClient implements ClientModInitializer {
     public static final ModelLayerLocation HERBIVORE_DINOSAUR_LAYER = new ModelLayerLocation(BeyondRealmsMod.id("herbivore_dinosaur"), "main");
     public static final ModelLayerLocation SPINOSAUR_LAYER = new ModelLayerLocation(BeyondRealmsMod.id("spinosaur"), "main");
 
+    public static final ModelLayerLocation TITAN_REX_BOSS_LAYER = new ModelLayerLocation(BeyondRealmsMod.id("titan_rex_boss"), "main");
+    public static final ModelLayerLocation WRAITH_LORD_BOSS_LAYER = new ModelLayerLocation(BeyondRealmsMod.id("wraith_lord_boss"), "main");
+    public static final ModelLayerLocation BROOD_MOTHER_BOSS_LAYER = new ModelLayerLocation(BeyondRealmsMod.id("brood_mother_boss"), "main");
+    public static final ModelLayerLocation VOID_TITAN_BOSS_LAYER = new ModelLayerLocation(BeyondRealmsMod.id("void_titan_boss"), "main");
+
     @Override
     public void onInitializeClient() {
         ModelLayerRegistry.registerModelLayer(PRIMEVAL_RAPTOR_LAYER, RealmMobModels.Raptor::layer);
@@ -25,6 +30,11 @@ public class BeyondRealmsClient implements ClientModInitializer {
         ModelLayerRegistry.registerModelLayer(CARNIVORE_DINOSAUR_LAYER, DinosaurModels.Carnivore::layer);
         ModelLayerRegistry.registerModelLayer(HERBIVORE_DINOSAUR_LAYER, DinosaurModels.Herbivore::layer);
         ModelLayerRegistry.registerModelLayer(SPINOSAUR_LAYER, DinosaurModels.Spinosaur::layer);
+
+        ModelLayerRegistry.registerModelLayer(TITAN_REX_BOSS_LAYER, BossModels.TitanRex::layer);
+        ModelLayerRegistry.registerModelLayer(WRAITH_LORD_BOSS_LAYER, BossModels.WraithLord::layer);
+        ModelLayerRegistry.registerModelLayer(BROOD_MOTHER_BOSS_LAYER, BossModels.BroodMother::layer);
+        ModelLayerRegistry.registerModelLayer(VOID_TITAN_BOSS_LAYER, BossModels.VoidTitan::layer);
 
         EntityRenderers.register(ModEntities.PRIMEVAL_RAPTOR, RealmMobRenderers.Raptor::new);
         EntityRenderers.register(ModEntities.GRAVE_WRAITH, RealmMobRenderers.Wraith::new);
@@ -44,5 +54,10 @@ public class BeyondRealmsClient implements ClientModInitializer {
         EntityRenderers.register(ModEntities.WEBFANG, ctx -> new DinosaurRenderers.RaptorVariant(ctx,"webfang",1.10F,.85F));
         EntityRenderers.register(ModEntities.VOID_REX, ctx -> new DinosaurRenderers.Carnivore(ctx,"void_rex",1.68F,1.55F));
         EntityRenderers.register(ModEntities.APEX_CHIMERA, ctx -> new DinosaurRenderers.Carnivore(ctx,"apex_chimera",1.85F,1.70F));
+
+        EntityRenderers.register(ModEntities.TITAN_REX, BossRenderers.TitanRex::new);
+        EntityRenderers.register(ModEntities.WRAITH_LORD, BossRenderers.WraithLord::new);
+        EntityRenderers.register(ModEntities.BROOD_MOTHER, BossRenderers.BroodMother::new);
+        EntityRenderers.register(ModEntities.VOID_TITAN, BossRenderers.VoidTitan::new);
     }
 }
